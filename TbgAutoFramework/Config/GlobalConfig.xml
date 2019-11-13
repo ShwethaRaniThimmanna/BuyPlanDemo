@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<EAAutoFramework>
+  -<RunSettings>
+
+    <AUTPlanner>http://buyplan-test.kmtltd.net.au:84/Planner/Widgets?depNo=008</AUTPlanner>
+
+    <AUTKas>http://buyplan-test.kmtltd.net.au:84/Kas/Widgets</AUTKas>
+
+    <!-- Possible flag Chrome,Firefox, IE-->
+    <Browser>Chrome</Browser>
+
+    <!-- Possible flag Smoke, Regression, Unit -->
+    <TestType>SmokeTest</TestType>
+
+    <!-- Possible Flag Y, N -->
+    <IsLog>Y</IsLog>
+    <LogPath>C:\\shwetha\\Logfiles_Shwetha\\</LogPath>
+    <BuildName>DemoBuild</BuildName>
+
+    <!-- Possible Flag Y, N -->
+    <IsReport>N</IsReport>
+    <UserName>BuyPlanAutoTeam</UserName>
+
+    <!-- Possible flag Selenium, Specflow -->
+    <Technology>Selenium</Technology>
+
+    <ProductSummaryUrl>http://buyplan-test.kmtltd.net.au:84/BuyPlan/Summary?depNo=008</ProductSummaryUrl>
+
+
+
+  </RunSettings>
+</EAAutoFramework>

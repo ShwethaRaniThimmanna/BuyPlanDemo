@@ -4,32 +4,38 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using Tbg.Automation.Framework.Base;
-using Tbg.Automation.Framework.Config;
+using BuyPlan.Automation.Framework.Base;
+using BuyPlan.Automation.Framework.Config;
 
-namespace Tbg.Automation.Framework.Config
+namespace BuyPlan.Automation.Framework.Config
 {
     public class AppSettings
     {
-        public int Timeout { get; set; }
+        public static int Timeout { get; set; }
 
-        public string IsReporting { get; set; }
+        public static string IsReporting { get; set; }
 
-        public string TestType { get; set; }
+        public static string TestType { get; set; }
 
         public string AUT { get; set; }
 
-        public string BuildName { get; set; }
+        public static string BuildName { get; set; }
 
-        public BrowserType BrowserType { get; set; }
+        public static BrowserType BrowserType { get; set; }
 
         public string DbConnectionString { get; set; }
 
         public string AppConnectionString { get; set; }
 
-        public string IsLog { get; set; }
+        public static string IsLog { get; set; }
 
-        public string LogPath { get; set; }
+        public static string LogPath { get; set; }
+
+        public static string AUTPlanner { get; set; }
+
+        public static string ProductSummaryUrl { get; set; }
+
+        public static string AUTKas { get; set; }
     }
 }
 

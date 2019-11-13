@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ExcelDataReader;
 
-namespace Tbg.Automation.Framework.Helpers
+namespace BuyPlan.Automation.Framework.Helpers
 {
     public class ExcelHelpers
     {

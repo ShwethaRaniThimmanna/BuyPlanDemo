@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
-using Tbg.Automation.Framework.Base;
+using BuyPlan.Automation.Framework.Base;
 
-namespace Tbg.Automation.Framework.Extensions
+namespace BuyPlan.Automation.Framework.Extensions
 {
     public static class WebDriverExtensions
     {
-        
-        public static void WaitForPageLoaded(this IWebDriver driver, int timeout=10)
+
+        public static void WaitForPageLoaded(this IWebDriver driver, int timeout = 10)
         {
             driver.WaitForCondition(dri =>
             {

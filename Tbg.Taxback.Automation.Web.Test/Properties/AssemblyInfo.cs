@@ -1,15 +1,17 @@
+using NUnit.Framework;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("Tbg.Taxback.Automation.Web.Test")]
+[assembly: AssemblyTitle("BuyPlan.Automation.Web.Test")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Tbg.Taxback.Automation.Web.Test")]
+[assembly: AssemblyProduct("BuyPlan.Automation.Web.Test")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: Parallelizable(ParallelScope.Fixtures)]
 
 [assembly: ComVisible(false)]
 

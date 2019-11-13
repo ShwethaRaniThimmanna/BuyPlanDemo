@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 
-namespace Tbg.Automation.Framework.Base
+namespace BuyPlan.Automation.Framework.Base
 {
 
     public class Browser
@@ -23,13 +23,12 @@ namespace Tbg.Automation.Framework.Base
         {
             DriverContext.Driver.Url = url;
         }
-
     }
 
     public enum BrowserType
     {
         InternetExplorer,
-        FireFox,
+        Firefox,
         Chrome,
         HeadlessChrome
     }

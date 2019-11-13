@@ -7,10 +7,10 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using ADONetHelper.Postgres;
-using Tbg.Automation.Framework.Config;
-using Tbg.Automation.Framework.Extensions;
+using BuyPlan.Automation.Framework.Config;
+using BuyPlan.Automation.Framework.Extensions;
 
-namespace Tbg.Automation.Framework.Helpers
+namespace BuyPlan.Automation.Framework.Helpers
 {
     public static class PostgresHelper
     {

@@ -7,33 +7,36 @@ using System.Threading.Tasks;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
-using Tbg.Automation.Framework.Config;
-using Tbg.Automation.Framework.Helpers;
+using BuyPlan.Automation.Framework.Config;
+using BuyPlan.Automation.Framework.Helpers;
 
 
-namespace Tbg.Automation.Framework.Base
+namespace BuyPlan.Automation.Framework.Base
 {
-    public abstract class InitializeFrameworkHook:Base
+    public abstract class TestInitializerHook : Base
     {
 
-        public InitializeFrameworkHook()
+        public readonly BrowserType Browser;
+        public TestInitializerHook(BrowserType browser)
         {
-          
-        }
-        public static void InitializeSettings()
-        {
-           //to do: logging
-           //to do: reporting
-           //other initialization tasks goes here
-           
-            //Open Browser
-           
-            OpenBrowser(Settings.AppSettings.BrowserType);
-           DriverContext.Driver.Manage().Window.Maximize();
-            
+            Browser = browser;
         }
 
-        private static void OpenBrowser(BrowserType browserType = BrowserType.Chrome)
+        public void InitializeSettings()
+        {
+            //Set all the settings for framework
+            ConfigReader.SetFrameworkSettings();
+
+            //Set Log
+            //LogHelpers.CreateLogFile();
+
+            //Open Browser
+            OpenBrowser(Browser);
+            //LogHelpers.Write("Initialized Framework !!!");
+        }
+
+
+        private void OpenBrowser(BrowserType browserType)
         {
             switch (browserType)
             {
@@ -41,27 +44,26 @@ namespace Tbg.Automation.Framework.Base
                     DriverContext.Driver = new InternetExplorerDriver();
                     DriverContext.Browser = new Browser(DriverContext.Driver);
                     break;
-                case BrowserType.FireFox:
+                case BrowserType.Firefox:
                     DriverContext.Driver = new FirefoxDriver();
                     DriverContext.Browser = new Browser(DriverContext.Driver);
                     break;
                 case BrowserType.Chrome:
-                    DriverContext.Driver = new ChromeDriver();
+                    DriverContext.Driver = new ChromeDriver(@"C:\drivers");
+                    //DriverContext.Driver = new ChromeDriver();
                     DriverContext.Browser = new Browser(DriverContext.Driver);
                     break;
-                case BrowserType.HeadlessChrome:
-                    var chromeOption = new ChromeOptions();
-                    chromeOption.AddArgument("headless");
-                    DriverContext.Driver = new ChromeDriver(chromeOption);
-                    DriverContext.Browser = new Browser(DriverContext.Driver);
+                default:
                     break;
             }
         }
 
         public virtual void NavigateSite()
         {
-            DriverContext.Browser.GoToUrl(Settings.AppSettings.AUT);
-           
+            DriverContext.Browser.GoToUrl(AppSettings.AUTPlanner);
+            //LogHelpers.Write("Opened the browser !!!");
+            DriverContext.Driver.Manage().Window.Maximize();
+            DriverContext.Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(50);
         }
 
 

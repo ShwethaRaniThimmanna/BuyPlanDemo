@@ -1,7 +1,7 @@
 using System;
 using Microsoft.Extensions.Configuration;
 
-namespace Tbg.Automation.Framework.Config
+namespace BuyPlan.Automation.Framework.Config
 {
     public class Settings
     {

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 
-namespace Tbg.Automation.Framework.Helpers
+namespace BuyPlan.Automation.Framework.Helpers
 {
     public class HtmlTableHelper
     {

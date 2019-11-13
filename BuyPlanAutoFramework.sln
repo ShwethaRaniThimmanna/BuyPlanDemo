@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tbg.Automation.Framework", "TbgAutoFramework\Tbg.Automation.Framework.csproj", "{EE1A630D-A99F-440A-8143-154732E2CEE5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuyPlan.Automation.Framework", "TbgAutoFramework\BuyPlan.Automation.Framework.csproj", "{EE1A630D-A99F-440A-8143-154732E2CEE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tbg.Taxback.Automation.Web.Test", "Tbg.Taxback.Automation.Web.Test\Tbg.Taxback.Automation.Web.Test.csproj", "{663E60A7-32A7-430E-A584-7E7CF1F39596}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuyPlan.Automation.Web.Test", "Tbg.Taxback.Automation.Web.Test\BuyPlan.Automation.Web.Test.csproj", "{663E60A7-32A7-430E-A584-7E7CF1F39596}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

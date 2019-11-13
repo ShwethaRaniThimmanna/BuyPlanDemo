@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tbg.Automation.Framework.Helpers
+namespace BuyPlan.Automation.Framework.Helpers
 {
     class ReportingHelpers
     {

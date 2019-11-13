@@ -1,4 +1,4 @@
-﻿using Tbg.Automation.Framework.Base;
+﻿using BuyPlan.Automation.Framework.Base;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-namespace Tbg.Automation.Framework.Extensions
+namespace BuyPlan.Automation.Framework.Extensions
 {
     public static class WebElementExtensions
     {
@@ -47,6 +47,12 @@ namespace Tbg.Automation.Framework.Extensions
         public static void AssertElementPresent(this IWebElement element)
         {
             if (!IsElementPresent(element))
+                throw new Exception(string.Format("Element Not Present exception"));
+        }
+
+        public static void AssertElementNotPresent(this IWebElement element)
+        {
+            if (IsElementPresent(element))
                 throw new Exception(string.Format("Element Not Present exception"));
         }
 

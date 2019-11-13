@@ -3,18 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tbg.Automation.Framework.Config;
-using Tbg.Automation.Framework.Extensions;
+using BuyPlan.Automation.Framework.Config;
+using BuyPlan.Automation.Framework.Extensions;
+using BuyPlan.Automation.Framework.Helpers;
 
-namespace Tbg.Automation.Framework.Base
+namespace BuyPlan.Automation.Framework.Base
 {
-    public abstract class BaseStep:Base
+    public abstract class BaseStep : Base
     {
-        public virtual void NavigateSite()
+        public virtual void NavigateSitePlanner()
         {
-            DriverContext.Browser.GoToUrl(Settings.AppSettings.AUT);
-            DriverContext.Driver.WaitForPageLoaded();
+            DriverContext.Browser.GoToUrl(AppSettings.AUTPlanner);
+            //LogHelpers.Write("Opened the browser !!!");
+            DriverContext.Driver.Manage().Window.Maximize();
+            DriverContext.Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(300);
         }
 
+        public virtual void NavigateSiteKASUser()
+        {
+            DriverContext.Browser.GoToUrl(AppSettings.AUTKas);
+            //LogHelpers.Write("Opened the browser !!!");
+
+            DriverContext.Driver.Manage().Window.Maximize();
+            DriverContext.Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(150);
+        }
     }
 }
